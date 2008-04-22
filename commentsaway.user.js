@@ -39,4 +39,12 @@ for (var i=0; i < nodes.snapshotLength; i++) {
 	commentNodes.push(node);
 }
 
+// Wordpress
+nodes = xpath("//div[@id='commentblock']");
+for (var i=0; i < nodes.snapshotLength; i++) {
+	node = nodes.snapshotItem(i);
+
+	commentNodes.push(node);
+}
+
 commentNodes.forEach(hideNode);
