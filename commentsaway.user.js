@@ -47,4 +47,13 @@ for (var i=0; i < nodes.snapshotLength; i++) {
 	commentNodes.push(node);
 }
 
+// MoveableType
+// (probably a better way to do this... I guess what we really want is the first div above an h2--or at least something?--with a 'comments' id)
+nodes = xpath("//div/h2[@id='comments']/parent::*");
+for (var i=0; i < nodes.snapshotLength; i++) {
+	node = nodes.snapshotItem(i);
+
+	commentNodes.push(node);
+}
+
 commentNodes.forEach(hideNode);
