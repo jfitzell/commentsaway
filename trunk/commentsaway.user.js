@@ -52,8 +52,14 @@ for (var i=0; i < nodes.snapshotLength; i++) {
 nodes = xpath("//div/h2[@id='comments']/parent::*");
 for (var i=0; i < nodes.snapshotLength; i++) {
 	node = nodes.snapshotItem(i);
-
 	commentNodes.push(node);
+}
+
+// CNN
+nodes = xpath("//div[@class='cnnUGCBox']//h3[@class='cnnOpinion' or @class='cnnOpinionClosed']/ancestor::div[@class='cnnUGCBox']");
+for (var i=0; i < nodes.snapshotLength; i++) {
+        node = nodes.snapshotItem(i);
+        commentNodes.push(node);
 }
 
 commentNodes.forEach(hideNode);
