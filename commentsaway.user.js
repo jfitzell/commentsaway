@@ -17,6 +17,7 @@ function hideNode(node) {
 	var oldDisplay = node.style.display;
 	showLink.addEventListener("click", function(event) {
 			node.style.display = oldDisplay;
+			this.style.display = 'none';
 			event.preventDefault();
 		}, true);
 
