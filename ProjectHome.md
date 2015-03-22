@@ -1,0 +1,1 @@
+a greasemonkey script to remove blog comments
